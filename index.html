@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sejarah Djarum — Singkat & Menarik</title>
+  <meta name="description" content="Ringkasan sejarah PT Djarum: asal-usul, tonggak penting, produk, dan diversifikasi bisnis." />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+    :root {
+      --accent: #8B2E2E;
+      --accent-light: #B94A4A;
+      --accent-dark: #6B1F1F;
+      --muted: #666;
+      --bg: #f8f9fa;
+      --text: #1a1a1a;
+      --card: #ffffff;
+      --border: #e5e7eb;
+      --radius: 16px;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+      --shadow: 0 8px 24px rgba(0,0,0,0.08);
+      --shadow-lg: 0 16px 48px rgba(0,0,0,0.12);
+    }
+
+    body.dark {
+      --accent: #ff9999;
+      --accent-light: #ffb3b3;
+      --accent-dark: #cc7777;
+      --muted: #a3a3a3;
+      --bg: #0f0f0f;
+      --text: #f5f5f5;
+      --card: #1a1a1a;
+      --border: #2a2a2a;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
+      --shadow: 0 8px 24px rgba(0,0,0,0.4);
+      --shadow-lg: 0 16px 48px rgba(0,0,0,0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    /* === HEADER HERO === */
+    .hero-header {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      padding: 60px 0;
+      margin: -24px -24px 40px -24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><rect width="60" height="60" fill="none"/><circle cx="30" cy="30" r="1.5" fill="rgba(255,255,255,0.1)"/></svg>');
+      opacity: 0.3;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-top {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      background: rgba(255,255,255,0.95);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 24px;
+      color: var(--accent);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    body.dark .logo {
+      background: rgba(255,255,255,0.1);
+      color: var(--accent);
+    }
+
+    .logo:hover {
+      transform: scale(1.05) rotate(-2deg);
+    }
+
+    .hero-title {
+      flex: 1;
+    }
+
+    .hero-title h1 {
+      font-size: 48px;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 8px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .hero-title p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.9);
+      font-weight: 400;
+    }
+
+    /* === NAVIGATION === */
+    nav {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    nav a {
+      padding: 12px 20px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 12px;
+      color: white;
+      font-weight: 600;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.25);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .toggle-dark {
+      margin-left: auto;
+      padding: 12px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      background: rgba(255,255,255,0.95);
+      color: var(--accent-dark);
+      font-weight: 700;
+      border: none;
+      transition: all 0.3s ease;
+      font-size: 14px;
+    }
+
+    .toggle-dark:hover {
+      background: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* === STATS BAR === */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .stat-card {
+      background: var(--card);
+      padding: 24px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .stat-value {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* === CARD SYSTEM === */
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      padding: 32px;
+      margin-bottom: 24px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .card h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .card h2::before {
+      content: '';
+      width: 4px;
+      height: 28px;
+      background: linear-gradient(to bottom, var(--accent), var(--accent-light));
+      border-radius: 2px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    /* === TIMELINE === */
+    .timeline {
+      list-style: none;
+      position: relative;
+      padding-left: 100px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 40px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--accent), var(--accent-light));
+      border-radius: 2px;
+    }
+
+    .timeline li {
+      position: relative;
+      padding: 20px 0 20px 32px;
+      margin-bottom: 24px;
+    }
+
+    .timeline li::before {
+      content: attr(data-year);
+      position: absolute;
+      left: -60px;
+      top: 20px;
+      background: var(--accent);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 14px;
+      box-shadow: var(--shadow);
+      z-index: 2;
+    }
+
+    .timeline li::after {
+      content: '';
+      position: absolute;
+      left: -68px;
+      top: 28px;
+      width: 16px;
+      height: 16px;
+      background: var(--card);
+      border: 3px solid var(--accent);
+      border-radius: 50%;
+      box-shadow: var(--shadow);
+      z-index: 3;
+    }
+
+    .timeline-content {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+    }
+
+    .timeline li:hover .timeline-content {
+      background: var(--accent);
+      color: white;
+      transform: translateX(8px);
+      box-shadow: var(--shadow);
+    }
+
+    .timeline-content strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    /* === SIDEBAR === */
+    .sidebar-card {
+      position: sticky;
+      top: 24px;
+    }
+
+    .sidebar-card img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 16px 0;
+      box-shadow: var(--shadow);
+    }
+
+    .info-item {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .info-item:last-child {
+      border-bottom: none;
+    }
+
+    .info-label {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .info-value {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .info-value a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .info-value a:hover {
+      color: var(--accent-light);
+      text-decoration: underline;
+    }
+
+    /* === PRODUCT GRID === */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .product-item {
+      background: linear-gradient(135deg, var(--card), var(--bg));
+      border: 1px solid var(--border);
+      padding: 24px;
+      border-radius: 12px;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .product-item:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent);
+    }
+
+    .product-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--accent);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin: 0 auto 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .product-name {
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .product-year {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    /* === FOOTER === */
+    footer {
+      text-align: center;
+      padding: 32px 0;
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 60px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-title h1 {
+        font-size: 36px;
+      }
+
+      .hero-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .timeline {
+        padding-left: 80px;
+      }
+
+      .toggle-dark {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-title h1 {
+        font-size: 28px;
+      }
+
+      .hero-content {
+        padding: 0 24px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      .stat-value {
+        font-size: 24px;
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* === ANIMATIONS === */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card {
+      animation: fadeInUp 0.6s ease forwards;
+      opacity: 0;
+    }
+
+    .card:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2) { animation-delay: 0.2s; }
+    .card:nth-child(3) { animation-delay: 0.3s; }
+    .card:nth-child(4) { animation-delay: 0.4s; }
+  </style>
+</head>
+
+<body>
+  <header class="hero-header">
+    <div class="hero-content">
+      <div class="hero-top">
+        <div class="logo">Djarum</div>
+        <div class="hero-title">
+          <h1>Sejarah PT Djarum</h1>
+          <p>Perjalanan dari industri kretek tradisional menjadi konglomerat terkemuka Indonesia</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#sejarah">📖 Sejarah</a>
+        <a href="#produk">🎯 Produk</a>
+        <a href="#diversifikasi">🏢 Bisnis Lain</a>
+        <a href="#timeline">⏱️ Timeline</a>
+        <button class="toggle-dark" id="themeToggle">🌙 Mode Gelap</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="stats-bar">
+      <div class="stat-card">
+        <span class="stat-value">1951</span>
+        <span class="stat-label">Tahun Didirikan</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">300K+</span>
+        <span class="stat-label">Karyawan</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">70+</span>
+        <span class="stat-label">Tahun Beroperasi</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value">Global</span>
+        <span class="stat-label">Jangkauan Ekspor</span>
+      </div>
+    </div>
+
+    <div class="grid">
+      <section id="sejarah" class="card">
+        <h2>Sejarah Perusahaan</h2>
+        <p style="margin-bottom: 16px;">
+          PT Djarum dimulai pada <strong>21 April 1951</strong> ketika Oei Wie Gwan mengambil alih NV Murup yang hampir bangkrut dan menyederhanakan merek menjadi <em>Djarum</em> (bahasa Indonesia untuk "jarum").
+        </p>
+        <p style="margin-bottom: 16px;">
+          Pada tahun 1963, kebakaran besar menghancurkan pabrik, namun keluarga Hartono (Michael dan Robert Budi Hartono) membangun kembali perusahaan dengan visi modern. Mereka mengadopsi produksi mesin pada tahun 1970-an dan mulai ekspor internasional.
+        </p>
+        <p style="margin-bottom: 16px;">
+          Sejak 1972, Djarum mengekspor produknya ke berbagai negara termasuk China, Jepang, Korea Selatan, Belanda, dan Amerika Serikat. Produk ikonik seperti <strong>Djarum Super</strong> (1981) dan <strong>Djarum Special</strong> (1983) menjadi bestseller global.
+        </p>
+        <p>
+          Kini, Djarum Group telah bertransformasi menjadi konglomerat dengan portofolio bisnis yang beragam, dari perbankan hingga e-commerce, dari properti hingga olahraga internasional.
+        </p>
+      </section>
+
+      <aside class="sidebar-card card">
+        <h2>Info Singkat</h2>
+        <div class="info-item">
+          <div class="info-label">Pendiri</div>
+          <div class="info-value">Oei Wie Gwan</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Tokoh Kunci</div>
+          <div class="info-value">Michael & Robert Budi Hartono</div>
+        </div>
+        <img src="https://raw.githubusercontent.com/azril290528/Timeline-djarum/refs/heads/main/Hartono%20bersaudara.png" alt="Hartono Bersaudara">
+        <div class="info-item">
+          <div class="info-label">Kantor Pusat</div>
+          <div class="info-value">Kudus, Jawa Tengah</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Industri Utama</div>
+          <div class="info-value">Rokok Kretek</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Website Resmi</div>
+          <div class="info-value"><a href="https://www.djarum.com" target="_blank">djarum.com</a></div>
+        </div>
+      </aside>
+    </div>
+
+    <section id="produk" class="card">
+      <h2>Produk Unggulan</h2>
+      <p style="margin-bottom: 24px;">
+        Djarum mengawali bisnis dengan kretek linting tangan, kemudian beralih ke produksi mesin untuk meningkatkan kapasitas dan kualitas. Berikut produk-produk ikonik yang mengantarkan Djarum menjadi merek global:
+      </p>
+      <div class="product-grid">
+        <div class="product-item">
+          <div class="product-icon">🚬</div>
+          <div class="product-name">Djarum Super</div>
+          <div class="product-year">Diluncurkan 1981</div>
+        </div>
+        <div class="product-item">
+          <div class="product-icon">⭐</div>
+          <div class="product-name">Djarum Special</div>
+          <div class="product-year">Diluncurkan 1983</div>
+        </div>
+        <div class="product-item">
+          <div class="product-icon">⚫</div>
+          <div class="product-name">Djarum Black</div>
+          <div class="product-year">Varian Premium</div>
+        </div>
+        <div class="product-item">
+          <div class="product-icon">🌍</div>
+          <div class="product-name">Ekspor Global</div>
+          <div class="product-year">Sejak 1972</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="diversifikasi" class="card">
+      <h2>Diversifikasi Bisnis</h2>
+      <p style="margin-bottom: 16px;">
+        Djarum Group telah berkembang jauh melampaui industri rokok, membangun ekosistem bisnis yang luas di berbagai sektor strategis:
+      </p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 20px;">
+        <div style="padding: 16px; background: var(--bg); border-radius: 12px; border-left: 4px solid var(--accent);">
+          <strong style="color: var(--accent);">🏦 Perbankan</strong>
+          <p style="margin: 8px 0 0; color: var(--muted); font-size: 14px;">Bank Central Asia (BCA) - bank terbesar di Indonesia</p>
+        </div>
+        <div style="padding: 16px; background: var(--bg); border-radius: 12px; border-left: 4px solid var(--accent);">
+          <strong style="color: var(--accent);">📱 Elektronik</strong>
+          <p style="margin: 8px 0 0; color: var(--muted); font-size: 14px;">Polytron - produsen elektronik terkemuka</p>
+        </div>
+        <div style="padding: 16px; background: var(--bg); border-radius: 12px; border-left: 4px solid var(--accent);">
+          <strong style="color: var(--accent);">🛒 E-Commerce</strong>
+          <p style="margin: 8px 0 0; color: var(--muted); font-size: 14px;">Blibli.com - platform belanja online terkemuka</p>
+        </div>
+        <div style="padding: 16px; background: var(--bg); border-radius: 12px; border-left: 4px solid var(--accent);">
+          <strong style="color: var(--accent);">✈️ Perjalanan</strong>
+          <p style="margin: 8px 0 0; color: var(--muted); font-size: 14px;">Tiket.com - platform booking perjalanan online</p>
+        </div>
+        <div style="padding: 16px; background: var(--bg); border-radius: 12px; border-left: 4px solid var(--accent);">
+          <strong style="color: var(--accent);">⚽ Olahraga</strong>
+          <p style="margin: 8px 0 0; color: var(--muted); font-size: 14px;">Como 1907 - klub sepak bola Italia</p>
+        </div>
+        <div style="padding: 16px; background: var(--bg); border-radius: 12px; border-left: 4px solid var(--accent);">
+          <strong style="color: var(--accent);">🏨 Perhotelan</strong>
+          <p style="margin: 8px 0 0; color: var(--muted); font-size: 14px;">Padma Hotels - jaringan hotel mewah</p>
+        </div>
+        <div style="padding: 16px; background: var(--bg); border-radius: 12px; border-left: 4px solid var(--accent);">
+          <strong style="color: var(--accent);">🏢 Properti</strong>
+          <p style="margin: 8px 0 0; color: var(--muted); font-size: 14px;">Grand Indonesia - pusat perbelanjaan premium</p>
+        </div>
+        <div style="padding: 16px; background: var(--bg); border-radius: 12px; border-left: 4px solid var(--accent);">
+          <strong style="color: var(--accent);">🛍️ Ritel</strong>
+          <p style="margin: 8px 0 0; color: var(--muted); font-size: 14px;">Berbagai brand dan toko ritel modern</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline" class="card">
+      <h2>Timeline Perjalanan</h2>
+      <ul class="timeline">
+        <li data-year="1951">
+          <div class="timeline-content">
+            <strong>Kelahiran Djarum</strong>
+            Oei Wie Gwan mengakuisisi NV Murup dan mengubahnya menjadi PT Djarum. Dimulai dengan produksi kretek linting tangan di Kudus, Jawa Tengah.
+          </div>
+        </li>
+        <li data-year="1963">
+          <div class="timeline-content">
+            <strong>Kebakaran & Transformasi</strong>
+            Pabrik terbakar habis. Keluarga Hartono membangun kembali dengan visi modernisasi dan mekanisasi produksi.
+          </div>
+        </li>
+        <li data-year="1970-an">
+          <div class="timeline-content">
+            <strong>Era Modernisasi</strong>
+            Transisi dari produksi manual ke mesin. Peningkatan kapasitas produksi dan standar kualitas internasional.
+          </div>
+        </li>
+        <li data-year="1972">
+          <div class="timeline-content">
+            <strong>Ekspansi Global</strong>
+            Memulai ekspor ke China, Jepang, Korea Selatan, Belanda, dan Amerika Serikat. Djarum menjadi merek internasional.
+          </div>
+        </li>
+        <li data-year="1981">
+          <div class="timeline-content">
+            <strong>Djarum Super</strong>
+            Peluncuran produk ikonik yang menjadi bestseller dan mengangkat reputasi Djarum di pasar global.
+          </div>
+        </li>
+        <li data-year="1983">
+          <div class="timeline-content">
+            <strong>Djarum Special</strong>
+            Meluncurkan varian premium yang semakin memperkuat posisi Djarum sebagai produsen kretek terkemuka.
+          </div>
+        </li>
+        <li data-year="1997">
+          <div class="timeline-content">
+            <strong>Akuisisi BCA</strong>
+            Djarum Group mengakuisisi Bank Central Asia pasca krisis finansial Asia, menandai diversifikasi besar ke sektor perbankan.
+          </div>
+        </li>
+        <li data-year="2004">
+          <div class="timeline-content">
+            <strong>Grand Indonesia</strong>
+            Membuka pusat perbelanjaan premium di Jakarta, ekspansi ke sektor properti dan ritel modern.
+          </div>
+        </li>
+        <li data-year="2010-an">
+          <div class="timeline-content">
+            <strong>Era Digital</strong>
+            Investasi besar di e-commerce (Blibli), travel (Tiket.com), dan teknologi digital untuk menghadapi transformasi ekonomi.
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Sejarah PT Djarum — Ringkasan edukatif untuk tujuan informasi Dari Kelompok 2</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('themeToggle');
+    const body = document.body;
+
+    // Cek preferensi tema yang tersimpan (tanpa localStorage)
+    let isDarkMode = false;
+
+    // Fungsi untuk toggle tema
+    function toggleTheme() {
+      isDarkMode = !isDarkMode;
+      if (isDarkMode) {
+        body.classList.add('dark');
+        toggleBtn.textContent = '☀️ Mode Terang';
+      } else {
+        body.classList.remove('dark');
+        toggleBtn.textContent = '🌙 Mode Gelap';
+      }
+    }
+
+    // Event listener untuk tombol toggle
+    toggleBtn.addEventListener('click', toggleTheme);
+
+    // Smooth scroll untuk anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(
